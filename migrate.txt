@@ -1,0 +1,36 @@
+
+jwhollister - Today at 8:38 PM
+anyone familiar with how Contract.Migrate works? How does it know which script hash to copy the storage of? Do you send the transaction from the previous contracts address?
+SamGuy - Today at 8:42 PM
+@jwhollister You add a method within your existing contract and then call that. 
+
+e.g. call 0x036236246g13jg64 with "upgrade", [hexofNewContract]
+
+This is supposed to copy all storage to the new contract hash and then "destroy" the original.
+I ran into this issue: https://github.com/neo-project/neo/issues/153 and had to manually destroy my original contract
+GitHub
+Contract.Migrate not destroying the original contract · Issue #153 · neo-project/neo
+When I invoke this in my contract:
+private static bool UpgradeContract(byte[] newScript)
+        {
+            Runtime.Notify("Starting Upgrade");
+            Contract.Migrate(newScript, new byte[]...
+
+jwhollister - Today at 8:47 PM
+oh it is run in the smart contract, I thought you did a syscall like neo-gui does for Neo.Contract.Create
+what is Contract an instance of in your example?
+I can't find Contract.Migrate
+I don't see that in other contracts I've looked at, are those just not upgradable now?
+RPX for example
+SamGuy - Today at 8:57 PM
+They would not be upgradable as far as I understand
+Neo.SmartContract.Framework.Services.Neo.Contract.Migrate should be the full namespace (in C# anyways)
+jwhollister - Today at 9:23 PM
+Ty found it
+Guess they'll have to do some manual pull of the old contracts storage then if they want to update it(edited)
+SamGuy - Today at 9:33 PM
+you can manually call Contract.Delete from within a contract
+Blake_Emigro - Today at 9:39 PM
+@vncoelho my ex-wife and ex business partners are brazucas! :face_palm:  :rofl:(edited)
+jwhollister - Today at 9:42 PM
+No I mean to get it into the new contract if they didn't build in the upgrade path to a contract that already ran it's ico

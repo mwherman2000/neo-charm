@@ -1,0 +1,35 @@
+Michael Herman (Toronto) - Today at 8:00 PM
+#Q001: Given the following  entrypoint public static object Main(string operation, params object[] args), what's the a) theoretical, b) actual, and c) practical limit on the size of args that can be passed to a SC? ...either measured in number of items or total size in bytes.  Thk u.  CC: @jianying li(a coder)
+#Q002: Similarly, what's the a) theoretical, b) actual, and c) practical limit on the size of the return value from a SC?  e.g. the number of bytes, the length of a string, ...? CC:  @jianying li(a coder)
+@Dimitris#5283  Open an issue: https://github.com/CityOfZion/neo-gui-developer and put [Request] at the beginning of the title.(edited)
+SamGuy - Today at 8:26 PM
+I am working on a little app that consumes the blockchain in C#. Everything was working until I updated the neo and neo.vm nuget packages. Now my blockchain height is always zero. Running out of ideas on what to try (have compared to neo-gui as well as have deleted my local chain folder). 
+
+On a background thread I do:
+LocalNode.Start(20333, 20334);
+
+then I wait to sync up:
+while (Blockchain.Default.HeaderHeight == 0 || Blockchain.Default.Height < Blockchain.Default.HeaderHeight)
+            {
+                Thread.Sleep(1000);
+            }
+Well after I typed it all out I decided to match the versions of neo/neo.vm with the latest neo-gui and it all works. I am surprised that neo-gui is not using the most recent version of those libraries though.
+1
+RavenXce - Today at 10:34 PM
+@Michael Herman (Toronto) theoretical limit would be 1024 args of 1mb each
+but if your object is an array as well.. maybe more?  https://github.com/neo-project/neo/blob/master/neo/SmartContract/ApplicationEngine.cs#L24
+GitHub
+neo-project/neo
+neo - NEO Smart Economy
+
+Michael Herman (Toronto) - Today at 10:39 PM
+@RavenXce  You mean if I chunk up my 100MB PPT, I have use the NEO Blockchain as a file system? ...he asks partly seriously.
+...but then there's Gas
+RavenXce - Today at 10:42 PM
+seems like - but i do remember seeing a max script length somewhere too, so that is probably the limiting factor, not these.
+https://github.com/neo-project/neo/blob/master/neo/Core/Witness.cs#L29 yup 65536 bytes is the absolute limit(edited)
+GitHub
+neo-project/neo
+neo - NEO Smart Economy
+
+so i guess the input is bounded at 64kb, but the output is mainly bounded by invocation stack limit and gas cost, as an object could have any structure (e.g. array of arrays)
