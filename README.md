@@ -101,28 +101,28 @@ The following diagram depicts in the architecture reference model (ARM) for the 
 * NEO Developer Environment
 * NEO Virtual Machine 
 
-![NEO Blockchain Architecture Reference Model](./diagrams/neo-charm-2-0-2.png)
+![NEO Blockchain Architecture Reference Model](./diagrams/neo-charm-2-0-6.png)
 Figure 2. NEO Blockchain Architecture Reference Model
 
 ### NEO Developer Environment
 
 The architecture of the NEO environment from a developer perspective is illustrated in the following diagram. This diagram was inspired by the [Relfos/neo-debugger-tools](https://github.com/Relfos/neo-debugger-tools) project.
 
-![NEO Developer Environment](./diagrams/neo-charm-2-0-2-annotated-dev.png)
+![NEO Developer Environment](./diagrams/neo-charm-2-0-6-dev-annotated.png)
 Figure 3. NEO Developer Environment
 
 The following table describes the key components of the NEO developer environment.
 
 | Mark | Name | Description |
 |:----:|:--------------- | ----------------------------------------|
-| ![A](../../images/balls/A32.png) | HelloWorld.cs | Smart contract source (example) 
-| ![B](../../images/balls/B32.png) | csc.exe | C# Compiler
-| ![C](../../images/balls/C32.png) | HelloWorld.dll | Smart contract compiled assembly (MSIL)
-| ![D](../../images/balls/D32.png) | neon.exe |NEO Transcompiler (debugger version)
-| ![E](../../images/balls/E32.png) | HelloWorld.avm | NEO VM script file (NEO byte code script)
-| ![F](../../images/balls/F32.png) | neo-gui (developer) | Smart contract deployment and testing tool
-| ![V](../../images/balls/V32.png) | Visual Studio | Microsoft .NET/C# IDE
-| ![W](../../images/balls/W32.png) | neo-debugger | Interactive source and byte code level debugger
+| ![A](images/balls/A32.png) | HelloWorld.cs | Smart contract source (example) 
+| ![B](images/balls/B32.png) | csc.exe | C# Compiler
+| ![C](images/balls/C32.png) | HelloWorld.dll | Smart contract compiled assembly (MSIL)
+| ![D](images/balls/D32.png) | neon.exe |NEO Transcompiler (debugger version)
+| ![E](images/balls/E32.png) | HelloWorld.avm | NEO VM script file (NEO byte code script)
+| ![F](images/balls/F32.png) | neo-gui (developer) | Smart contract deployment and testing tool
+| ![V](images/balls/V32.png) | Visual Studio | Microsoft .NET/C# IDE
+| ![W](images/balls/W32.png) | neo-debugger | Interactive source code and byte code level debugger
 
 Table 1. NEO Developer Environment
 
@@ -130,31 +130,31 @@ Table 1. NEO Developer Environment
 
 The architecture of the NEO Virtual Machine (NEO VM) is illustrated in the following diagram.
 
-![NEO Virtual Machine Architecture](./diagrams/neo-charm-2-0-2-annotated-vm.png)
+![NEO Virtual Machine Architecture](./diagrams/neo-charm-2-0-6-vm-annotated.png)
 Figure 4. NEO Virtual Machine Architecture
 
 The following table describes the key components of the NEO VM.
 
 | Mark | Name | Description | Namespaces/APIs Callable by a Smart Contract |
 |:----:|:--------------- |:--------------- | ----------------------------------------|
-| ![G](../../images/balls/G32.png) | NEO VM | Virtual machine major components and services | -
-| ![H](../../images/balls/H32.png) | ExecutionEngine | Execution enging components | `Neo.SmartContract.Framework.Services.System.ExecutionEngine` class
-| ![I](../../images/balls/I32.png) | CurrentContext | Execution engine current context | -
-| ![J](../../images/balls/J32.png) | InstructionPointer | Execution engine current instruction pointer | -
-| ![K](../../images/balls/K32.png) | Script | Current smart contract script being executed | `Neo.SmartContract.Framework.SmartContract` class
-| ![L](../../images/balls/L32.png) | ExecutionStack | Execution engine data stack | -
-| ![M](../../images/balls/M32.png) | VMState | Virtual machine current state (HALT, FAULT, BREAK) | -
-| ![N](../../images/balls/N32.png) | ScriptTable | Virtual machine script table of callable scripts | -
-| ![O](../../images/balls/O32.png) | InteropService | Interop service layer for everything that isn't one of the basic execution engine capabilities (see above) | -
-| ![P](../../images/balls/P32.png) | Account Service | Account service | `Neo.SmartContract.Framework.Services.Neo.Account` class
-| ![Q](../../images/balls/Q32.png) | Asset Service | Asset service | `Neo.SmartContract.Framework.Services.Neo.Asset` class
-| ![R](../../images/balls/R32.png) | Block Service | Block service | `Neo.SmartContract.Framework.Services.Neo.Block` class
-| ![S](../../images/balls/S32.png) | Blockchain Service, Header Service | Blockchain and Header services | `Neo.SmartContract.Framework.Services.Neo.Blockchain` class, `Neo.SmartContract.Framework.Services.Neo.Header` class
-| ![T](../../images/balls/T32.png) | Contract Service | Contract service | `Neo.SmartContract.Framework.Services.Neo.Contract` class
-| ![U](../../images/balls/U32.png) | Runtime Service | Runtime service | `Neo.SmartContract.Framework.Services.Neo.Runtime` class
-| ![X](../../images/balls/X32.png) | Storage Service | Storage service | `Neo.SmartContract.Framework.Services.Neo.Storage` class
-| ![Y](../../images/balls/Y32.png) | Validator Service | Validator service | `Neo.SmartContract.Framework.Services.Neo.Validator` class
-| ![Z](../../images/balls/Z32.png) | Blockchain State | Distributed ledger | -
+| ![G](images/balls/G32.png) | NEO VM | Virtual machine major components and services | - |
+| ![H](images/balls/H32.png) | ExecutionEngine | Execution enging components | `Neo.SmartContract.Framework.Services.System.ExecutionEngine` class
+|  | CurrentContext | Execution engine current context | - |
+| ![I](images/balls/I32.png) | InstructionPointer | Execution engine current instruction pointer | - |
+| ![K](images/balls/K32.png) | Script | Current smart contract script being executed | `Neo.SmartContract.Framework.SmartContract` class |
+| ![L](images/balls/L32.png) | VMState | Virtual machine current state (HALT, FAULT, BREAK) | - |
+| ![M](images/balls/M32.png) | ExecutionStack & AltStack | Execution engine data stack & alternate stack | - |
+| ![N](images/balls/N32.png) | Debugger Interaface | Virtual machine debugger interface | - |
+| ![O](images/balls/O32.png) | InteropService | Interop service layer for everything that isn't one of the basic execution engine capabilities (see above) | - |
+| ![P](images/balls/P32.png) | Account Service | Account service | `Neo.SmartContract.Framework.Services.Neo.Account` class |
+| ![Q](images/balls/Q32.png) | Asset Service | Asset service | `Neo.SmartContract.Framework.Services.Neo.Asset` class |
+| ![R](images/balls/R32.png) | Block Service | Block service | `Neo.SmartContract.Framework.Services.Neo.Block` class |
+| ![S](images/balls/S32.png) | Blockchain Service, Header Service | Blockchain and Header services | `Neo.SmartContract.Framework.Services.Neo.Blockchain` class, `Neo.SmartContract.Framework.Services.Neo.Header` class |
+| ![T](images/balls/T32.png) | Contract Service | Contract service | `Neo.SmartContract.Framework.Services.Neo.Contract` class |
+| ![U](images/balls/U32.png) | Runtime Service | Runtime service | `Neo.SmartContract.Framework.Services.Neo.Runtime` class |
+| ![X](images/balls/X32.png) | Storage Service | Storage service | `Neo.SmartContract.Framework.Services.Neo.Storage` class |
+| ![Y](images/balls/Y32.png) | Validator Service | Validator service | `Neo.SmartContract.Framework.Services.Neo.Validator` class |
+| ![Z](images/balls/Z32.png) | Blockchain State | Distributed ledger | - |
 
 Table 2. NEO Virtual Machine
 
@@ -162,7 +162,7 @@ Table 2. NEO Virtual Machine
 
 The NEO .NET namespaces are illustrated below.
 
-![NEO Blockchain Architecture Reference Model (.NET namespaces)](./diagrams/neo-charm-1-0-2.png)
+![NEO Blockchain Architecture Reference Model (.NET namespaces)](./diagrams/neo-charm-1-0-2-namespaces.png)
 Figure 5. NEO Blockchain Architecture Reference Model (.NET namespaces)
 
 ## References
