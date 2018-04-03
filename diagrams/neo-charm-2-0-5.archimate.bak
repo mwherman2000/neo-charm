@@ -54,7 +54,7 @@
     <element xsi:type="archimate:DataObject" name="_encryptedBlobURI" id="9905f8aa-15bb-4c17-b4ee-176c1afcbc2b"/>
     <element xsi:type="archimate:DataObject" name="_workflowState" id="a0b8df67-a1c1-4363-8b12-47ff53424fed"/>
     <element xsi:type="archimate:DataObject" name="REL_Contrib_Req" id="fbcf89db-3f59-4f43-bc49-6ce80b191c5f"/>
-    <element xsi:type="archimate:DataObject" name="req_index" id="f1e4faba-41f0-49ed-b92f-7157eea0328a"/>
+    <element xsi:type="archimate:DataObject" name="_reqIndex" id="f1e4faba-41f0-49ed-b92f-7157eea0328a"/>
   </folder>
   <folder name="Technology &amp; Physical" id="06c1d975-1d47-427e-acda-0898c1672de3" type="technology">
     <element xsi:type="archimate:TechnologyInterface" name="Neo.SmartContract.Framework" id="2669bdae-2546-41a1-8217-30794e545d8b"/>
@@ -187,7 +187,7 @@
     <element xsi:type="archimate:Artifact" name="_workflowState" id="c59dfb42-f334-4456-9eb4-1f5813988ff7"/>
     <element xsi:type="archimate:Artifact" name="_STA" id="5634b305-821f-4948-aa41-5e18629e0496"/>
     <element xsi:type="archimate:Artifact" name="REL_Contrib_Req" id="f9a6e3ce-e5ef-4ee3-8ac0-29b17631a4af"/>
-    <element xsi:type="archimate:Artifact" name="req_index" id="3d4ba823-fbe6-476c-bbe1-269530328104"/>
+    <element xsi:type="archimate:Artifact" name="_reqIndex" id="3d4ba823-fbe6-476c-bbe1-269530328104"/>
     <element xsi:type="archimate:Artifact" name="_STA" id="e3f4f5ad-d434-4a2b-a3d0-0fa0bf982bfd"/>
   </folder>
   <folder name="Motivation" id="c781203e-9f12-4a3b-bf51-fb8457ebd14c" type="motivation"/>
