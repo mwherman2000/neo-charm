@@ -164,7 +164,7 @@ Table 2. NEO Virtual Machine
 
 ### NEO Node
 
-The architecture of a NEO Node is illustrated in the following diagram. This diagram was inspired by reading the C# code for [neo-project/neo-cli](https://github.com/neo-project/neo-cli) NEO Node and [neo-project/neo](https://github.com/neo-project/neo) NEO Runtime projects.
+The architecture of a NEO Node is illustrated in the following diagram. This diagram was inspired by reading the C# code for the [neo-project/neo-cli](https://github.com/neo-project/neo-cli) NEO Node and [neo-project/neo](https://github.com/neo-project/neo) NEO Runtime projects.
 
 ![NEO Node Architecture](./diagrams/neo-node-2-0-8-annotated.png)
 
