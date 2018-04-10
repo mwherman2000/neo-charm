@@ -100,7 +100,7 @@ The following diagram depicts in the architecture reference model (ARM) for the 
 
 * [NEO Developer Environment](https://github.com/mwherman2000/neo-charm#neo-developer-environment)
 * [NEO Virtual Machine](https://github.com/mwherman2000/neo-charm#neo-virtual-machine)
-* [Node Node](https://github.com/mwherman2000/neo-charm#neo-node) 
+* [NEO Node](https://github.com/mwherman2000/neo-charm#neo-node) 
 
 ![NEO Blockchain Architecture Reference Model](./diagrams/neo-charm-2-0-6.png)
 
