@@ -1027,7 +1027,7 @@ http://docs.neo.org/en-us/sc/tutorial.html</content>
         </child>
       </child>
     </element>
-    <element xsi:type="archimate:ArchimateDiagramModel" name="NEO Architecture Reference Model v2.1" id="aa9af301-e2a9-421a-919c-8118d57a9df4">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="NEO Architecture Reference Model v2.6" id="aa9af301-e2a9-421a-919c-8118d57a9df4">
       <child xsi:type="archimate:Group" id="17793bd6-4eed-4186-94a8-55eb614d2bbe" name="NEO Developer Environment" textAlignment="1">
         <bounds x="612" y="24" width="577" height="481"/>
         <child xsi:type="archimate:DiagramObject" id="f3d6e967-4db6-4097-9fbc-dfb197b54f6a" targetConnections="7a8a07fe-75f0-4bd2-8765-29ddd6772f20" archimateElement="2f5793b5-0b18-44d3-886e-d89ed4b378ab">
