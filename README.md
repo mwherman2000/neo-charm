@@ -98,10 +98,12 @@ As a smart contract developer, it is your responsibility to learn and understand
 
 The following diagram depicts in the architecture reference model (ARM) for the NEO Blockchain. It consists of two main components:
 
-* NEO Developer Environment
-* NEO Virtual Machine 
+* [NEO Developer Environment](https://github.com/mwherman2000/neo-charm#neo-developer-environment)
+* [NEO Virtual Machine](https://github.com/mwherman2000/neo-charm#neo-virtual-machine)
+* [Node Node](https://github.com/mwherman2000/neo-charm#neo-node) 
 
 ![NEO Blockchain Architecture Reference Model](./diagrams/neo-charm-2-0-6.png)
+
 Figure 2. NEO Blockchain Architecture Reference Model
 
 ### NEO Developer Environment
@@ -109,6 +111,7 @@ Figure 2. NEO Blockchain Architecture Reference Model
 The architecture of the NEO environment from a developer perspective is illustrated in the following diagram. This diagram was inspired by the [Relfos/neo-debugger-tools](https://github.com/Relfos/neo-debugger-tools) project.
 
 ![NEO Developer Environment](./diagrams/neo-charm-2-0-6-dev-annotated.png)
+
 Figure 3. NEO Developer Environment
 
 The following table describes the key components of the NEO developer environment.
@@ -131,6 +134,7 @@ Table 1. NEO Developer Environment
 The architecture of the NEO Virtual Machine (NEO VM) is illustrated in the following diagram.
 
 ![NEO Virtual Machine Architecture](./diagrams/neo-charm-2-0-6-vm-annotated.png)
+
 Figure 4. NEO Virtual Machine Architecture
 
 The following table describes the key components of the NEO VM.
@@ -157,6 +161,14 @@ The following table describes the key components of the NEO VM.
 | ![Z](images/balls/Z32.png) | Blockchain State | Distributed ledger | - |
 
 Table 2. NEO Virtual Machine
+
+### NEO Node
+
+The architecture of a NEO Node is illustrated in the following diagram. This diagram was inspired by reading the C# code for [neo-project/neo-cli](https://github.com/neo-project/neo-cli) NEO Node and [neo-project/neo](https://github.com/neo-project/neo) NEO Runtime projects.
+
+![NEO Node Architecture](./diagrams/neo-node-2-0-8-annotated.png)
+
+Figure 5. NEO Node Architecture
 
 ### NEO .NET Namespaces
 
