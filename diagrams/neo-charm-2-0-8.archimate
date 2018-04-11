@@ -1443,7 +1443,7 @@ http://docs.neo.org/en-us/sc/tutorial.html</content>
           <sourceConnection xsi:type="archimate:Connection" id="f79b161b-f1ac-4bc5-936d-46c044e26beb" source="f3ec9c63-ccf5-4a32-a0b8-3469307606ff" target="e31bd52d-771e-4b51-b516-8ccf6784a4f3" archimateRelationship="eaaed70a-60db-41ee-8195-20b590421096"/>
         </child>
       </child>
-      <child xsi:type="archimate:Group" id="c68f4129-ce08-4326-b8b0-a5a5cedc3bfa" name="NPC Smart Data Entity Model" textAlignment="1">
+      <child xsi:type="archimate:Group" id="c68f4129-ce08-4326-b8b0-a5a5cedc3bfa" name="NPC Smart Data Model" textAlignment="1">
         <bounds x="24" y="-96" width="385" height="517"/>
         <child xsi:type="archimate:Group" id="a5c42574-28a8-4cbd-9f72-a9fdcb5112d9" name="NPC Key-Entity Storage" textAlignment="1">
           <bounds x="24" y="240" width="337" height="121"/>
@@ -1508,10 +1508,10 @@ http://docs.neo.org/en-us/sc/tutorial.html</content>
             <sourceConnection xsi:type="archimate:Connection" id="159f5992-978b-47fe-9f5e-a5f800fc63b4" source="0b4066ab-8ace-4142-8da2-8b2201a60ebd" target="942ccc10-45ad-4de7-8b58-3fa4f4b9e2d2" archimateRelationship="a477ed3c-3c3f-4c7a-9227-b2f8b3966309"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="42b9a0d9-0b54-4fb1-8770-81eaf8900ccd" targetConnections="febea159-0c6d-42f1-a129-c8bfca9336ed" archimateElement="b172f8c8-8c5d-449d-b059-894584b836c4">
-            <bounds x="24" y="24" width="120" height="49"/>
+            <bounds x="17" y="24" width="133" height="49"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="d3dfb5ae-79f4-4ffb-b0a5-8e2f1ede612c" targetConnections="03b60f90-dede-4490-9f78-5566d234c79a" archimateElement="94537ac4-b3c1-4e90-a178-63650834ff7a">
-            <bounds x="24" y="93" width="120" height="49"/>
+            <bounds x="17" y="96" width="133" height="49"/>
             <sourceConnection xsi:type="archimate:Connection" id="febea159-0c6d-42f1-a129-c8bfca9336ed" source="d3dfb5ae-79f4-4ffb-b0a5-8e2f1ede612c" target="42b9a0d9-0b54-4fb1-8770-81eaf8900ccd" archimateRelationship="3a4e32b7-8197-47c3-a5e7-9d937e605b0c"/>
             <sourceConnection xsi:type="archimate:Connection" id="d5f4e118-fabb-46ef-96d9-969756b61176" source="d3dfb5ae-79f4-4ffb-b0a5-8e2f1ede612c" target="bdf9037e-0271-4196-837a-95285062b46b" archimateRelationship="45446774-05e8-41e8-97f9-2585f53186c6"/>
           </child>
