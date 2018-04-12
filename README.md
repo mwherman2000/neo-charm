@@ -96,7 +96,7 @@ As a smart contract developer, it is your responsibility to learn and understand
 
 ## NEO Blockchain Architecture Reference Model (ARM)
 
-The following diagram depicts in the architecture reference model (ARM) for the NEO Blockchain. It consists of two main components:
+The following diagram depicts in the architecture reference model (ARM) for the NEO Blockchain. It consists of the following main components:
 
 * [NEO Developer Environment](https://github.com/mwherman2000/neo-charm#neo-developer-environment)
 * [NEO Virtual Machine](https://github.com/mwherman2000/neo-charm#neo-virtual-machine)
