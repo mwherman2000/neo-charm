@@ -7,8 +7,8 @@
     <element xsi:type="archimate:BusinessRole" name="User" id="83240563-8f11-41fe-b8f6-b7c56f8d5ea2"/>
   </folder>
   <folder name="Application" id="11c82a3c-02f6-4796-99d7-55e39779f08f" type="application">
-    <element xsi:type="archimate:ApplicationComponent" name="Smart Contract" id="733a8c30-d9ec-4b75-8e75-2f3d23d83029"/>
-    <element xsi:type="archimate:DataObject" name="Entity Persistance Layer" id="3bff2b8c-db6e-4bf8-bbc9-3efa52978934"/>
+    <element xsi:type="archimate:ApplicationComponent" name="NEO Smart Contract" id="733a8c30-d9ec-4b75-8e75-2f3d23d83029"/>
+    <element xsi:type="archimate:DataObject" name="Entities" id="3bff2b8c-db6e-4bf8-bbc9-3efa52978934"/>
     <element xsi:type="archimate:DataObject" name="Command Processor" id="d6c991e4-6ad8-4c5f-9db8-d8596fae5258"/>
     <element xsi:type="archimate:DataObject" name="Contract Driver Classes" id="ff718d3e-a107-4e07-aa57-e451599c1244"/>
     <element xsi:type="archimate:ApplicationComponent" name="Frontend (HTML/CSS/ASP.NET/C#)" id="2299188f-af76-4e0b-b80e-cc518603b08b"/>
@@ -23,12 +23,15 @@
     <element xsi:type="archimate:ApplicationComponent" name="React/Angular Frameworks" id="e8d69b21-3ad3-4585-974d-5210d036a358"/>
     <element xsi:type="archimate:ApplicationComponent" name="Middle Tier Business Logic &amp; Data Access (Django/Python)" id="8c1ee75c-5bf1-4c00-b8a7-a43364a40df3"/>
     <element xsi:type="archimate:ApplicationInterface" name="Web User Interface" id="0b884d31-c8ea-42db-ba3c-212ac89c41a5"/>
-    <element xsi:type="archimate:ApplicationComponent" name="Smart Contract" id="5cb3b918-7420-43d7-ae83-4facb133ff8a"/>
+    <element xsi:type="archimate:ApplicationComponent" name="NEO Smart Contract" id="5cb3b918-7420-43d7-ae83-4facb133ff8a"/>
     <element xsi:type="archimate:DataObject" name="Entity Persistance Layer" id="7f23fa2d-5b95-4efe-ac72-e0e9beb57534"/>
     <element xsi:type="archimate:DataObject" name="Command Processor" id="6a8ff200-27b7-4d6f-b2e3-2974f67d646d"/>
-    <element xsi:type="archimate:ApplicationComponent" name="Smart Contract" id="77dee966-3c55-4e95-8473-3f9bf346fc95"/>
+    <element xsi:type="archimate:ApplicationComponent" name="NEO Smart Contract" id="77dee966-3c55-4e95-8473-3f9bf346fc95"/>
     <element xsi:type="archimate:DataObject" name="Entity Persistance Layer" id="98e8f87e-cc11-4978-9d35-89e42533d711"/>
     <element xsi:type="archimate:DataObject" name="Command Processor" id="3eaabdbe-45f1-4a69-be0e-bc5aada377ee"/>
+    <element xsi:type="archimate:ApplicationComponent" name="ETH Smart Contract" id="dc10f9fd-6b7e-4534-9a6d-f9e490022356"/>
+    <element xsi:type="archimate:DataObject" name="Fields" id="232b52b6-38b0-4a29-a411-88d1dceeeae5"/>
+    <element xsi:type="archimate:DataObject" name="Command Processor" id="3b9a3031-f45f-440b-8f82-21b66abe55ef"/>
   </folder>
   <folder name="Technology &amp; Physical" id="06c1d975-1d47-427e-acda-0898c1672de3" type="technology">
     <element xsi:type="archimate:TechnologyService" name="..." id="79d41ba1-0b3f-4d3d-bb2e-bdd4d6ec32ec"/>
@@ -44,12 +47,14 @@
     <element xsi:type="archimate:Artifact" name="Blobstore (Intranet/Cloud)" id="889696ab-1c8f-4f4e-bce0-22f6be176826"/>
     <element xsi:type="archimate:Artifact" name="Blobstore (Intranet/Cloud)" id="f1357e74-026e-4528-80a7-fb91fb0a3454"/>
     <element xsi:type="archimate:Artifact" name="Blobstore (Intranet/Cloud)" id="566e4035-92f1-413d-bfa9-eaea3fa780fd"/>
-    <element xsi:type="archimate:Artifact" name="Blockchain State" id="c6dc9e5a-fae8-495a-bede-374516251521"/>
+    <element xsi:type="archimate:Artifact" name="NEO Blockchain" id="c6dc9e5a-fae8-495a-bede-374516251521"/>
     <element xsi:type="archimate:TechnologyService" name="NEO Node (RPC/HTTP Endpoint - neo-cli)" id="c15898d8-de02-45c5-882f-df57a35c63a4"/>
     <element xsi:type="archimate:Artifact" name="Blockchain State" id="f2480338-e410-441c-9aa3-b78ab5530696"/>
     <element xsi:type="archimate:TechnologyService" name="NEO Node (RPC/HTTP Endpoint - neo-cli)" id="36299e34-fcd8-459c-acfd-ff98cfc72361"/>
     <element xsi:type="archimate:Artifact" name="Blockchain State" id="157fc132-2ddc-4af6-80e3-9e94dc526a50"/>
     <element xsi:type="archimate:TechnologyService" name="NEO Node (RPC/HTTP Endpoint - neo-cli)" id="3663aedd-a5f2-4e97-9444-95ada44ce51f"/>
+    <element xsi:type="archimate:Artifact" name="ETH Blockchain" id="78f4cbfd-1bd9-494d-abe0-ef1e2c5cf9c7"/>
+    <element xsi:type="archimate:TechnologyService" name="ETH Node (RPC/HTTP Endpoint - geth.exe)" id="439a4f0d-e5c8-429f-8617-da00d25f59ab"/>
   </folder>
   <folder name="Motivation" id="c781203e-9f12-4a3b-bf51-fb8457ebd14c" type="motivation"/>
   <folder name="Implementation &amp; Migration" id="7901c1e6-31e8-42fc-ba5d-d164973951ab" type="implementation_migration"/>
@@ -84,6 +89,9 @@
     <element xsi:type="archimate:ServingRelationship" id="464f3b36-dbd9-4f1a-8798-8d92b07c44e9" source="36299e34-fcd8-459c-acfd-ff98cfc72361" target="0bd497e9-cbdf-411e-b1d9-47411f6cfbcd"/>
     <element xsi:type="archimate:ServingRelationship" id="64ffbb85-f090-4363-a005-8e3f84feaa43" source="36299e34-fcd8-459c-acfd-ff98cfc72361" target="8c1ee75c-5bf1-4c00-b8a7-a43364a40df3"/>
     <element xsi:type="archimate:ServingRelationship" id="27603bb9-24cb-4bc0-828f-89e4b908ceb0" source="3663aedd-a5f2-4e97-9444-95ada44ce51f" target="8c1ee75c-5bf1-4c00-b8a7-a43364a40df3"/>
+    <element xsi:type="archimate:ServingRelationship" id="f012370c-fdba-47b1-bc00-c9fba4223e4d" source="dc10f9fd-6b7e-4534-9a6d-f9e490022356" target="439a4f0d-e5c8-429f-8617-da00d25f59ab"/>
+    <element xsi:type="archimate:AccessRelationship" id="11824f7f-3478-4cb7-b1e8-26a3edaa63e1" source="dc10f9fd-6b7e-4534-9a6d-f9e490022356" target="78f4cbfd-1bd9-494d-abe0-ef1e2c5cf9c7"/>
+    <element xsi:type="archimate:ServingRelationship" id="3e774157-d907-4911-ae31-0db0d6906e77" source="439a4f0d-e5c8-429f-8617-da00d25f59ab" target="a05554af-9817-4dd3-8499-6c1b250cd956"/>
   </folder>
   <folder name="Views" id="3020d484-7aa2-4ccb-ab5c-649396e9a8f3" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" name="Enterprise dApp Reference Model" id="caf8f9ad-a6a1-4cdc-961a-ab5b97296b37">
@@ -386,6 +394,89 @@
         <bounds x="1069" y="-60" width="216" height="108"/>
         <child xsi:type="archimate:DiagramObject" id="718d3d46-5beb-48d9-8856-e896acf2ce6d" targetConnections="514a0591-bcc6-437d-8801-7d8cda3ee7d0" archimateElement="83240563-8f11-41fe-b8f6-b7c56f8d5ea2">
           <bounds x="24" y="36" width="168" height="55"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Multi-Blockchain Enterprise dApp Reference Model" id="bd0075e0-d89c-47de-b659-cac155f88722">
+      <child xsi:type="archimate:Group" id="33533dbc-a25b-4d5f-a985-843c608b1f68" name="On-Chain Smart Data" textAlignment="1" fillColor="#8080ff">
+        <bounds x="288" y="468" width="217" height="383"/>
+        <child xsi:type="archimate:DiagramObject" id="334350b0-99d5-47e6-a32a-fdb783257cd6" archimateElement="733a8c30-d9ec-4b75-8e75-2f3d23d83029">
+          <bounds x="24" y="120" width="169" height="144"/>
+          <sourceConnection xsi:type="archimate:Connection" id="ca03be5a-5ed3-4f8d-812b-966b2725507a" source="334350b0-99d5-47e6-a32a-fdb783257cd6" target="86aca5c0-614c-4f1b-b7fd-9b7f04247cd3" archimateRelationship="e8d1e62e-cb44-41fd-8a84-e94ac7218249"/>
+          <sourceConnection xsi:type="archimate:Connection" id="69fdae45-f554-4444-a646-483ac7d629c2" source="334350b0-99d5-47e6-a32a-fdb783257cd6" target="797c3537-a082-4fb4-aec0-8cd3a1ca4c90" archimateRelationship="066be0e1-2310-48f1-95e7-d066806a477e"/>
+          <child xsi:type="archimate:DiagramObject" id="48deb326-1026-40d5-a249-2fc214e14f2a" archimateElement="3bff2b8c-db6e-4bf8-bbc9-3efa52978934">
+            <bounds x="36" y="84" width="120" height="48"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="cd38d10d-2d56-4cb8-a6e9-738d1e286e48" archimateElement="d6c991e4-6ad8-4c5f-9db8-d8596fae5258">
+            <bounds x="36" y="24" width="120" height="48"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="797c3537-a082-4fb4-aec0-8cd3a1ca4c90" targetConnections="69fdae45-f554-4444-a646-483ac7d629c2" archimateElement="c6dc9e5a-fae8-495a-bede-374516251521">
+          <bounds x="31" y="288" width="156" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="86aca5c0-614c-4f1b-b7fd-9b7f04247cd3" targetConnections="ca03be5a-5ed3-4f8d-812b-966b2725507a" archimateElement="c15898d8-de02-45c5-882f-df57a35c63a4">
+          <bounds x="30" y="36" width="157" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="f3a0b8b5-ced1-4cc5-a7ea-050ec5b5eb5e" textPosition="2" source="86aca5c0-614c-4f1b-b7fd-9b7f04247cd3" target="5e233a8b-041c-41fd-9a05-1fee3531eb86" archimateRelationship="634ce34e-2760-492b-80a2-2e31c55b2f38"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="5272cbcd-6ec7-4ea6-a27b-5b345007236e" name="Application Domain" textAlignment="1">
+        <bounds x="540" y="72" width="217" height="492"/>
+        <child xsi:type="archimate:DiagramObject" id="49bf9e54-a0f4-4a30-ab78-182d086014d0" targetConnections="4e7bd625-ae0d-4f17-a731-b6b67b2e0908" archimateElement="2299188f-af76-4e0b-b80e-cc518603b08b">
+          <bounds x="25" y="120" width="169" height="160"/>
+          <sourceConnection xsi:type="archimate:Connection" id="3822b63e-143b-4e06-a9ee-d078653ca05d" source="49bf9e54-a0f4-4a30-ab78-182d086014d0" target="7e01c8dd-5ca0-4965-bb74-b7a4ec3da817" archimateRelationship="dd557972-bfca-41c2-ac4d-5bf9e59b260b"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c8d2c305-a2bb-4a00-99c8-5b920b2f0979" source="49bf9e54-a0f4-4a30-ab78-182d086014d0" target="b290d775-3106-4f5f-aa85-e9836166435a" archimateRelationship="314a8c89-d391-46d0-9772-a962c3c2e6fd"/>
+          <child xsi:type="archimate:DiagramObject" id="b290d775-3106-4f5f-aa85-e9836166435a" targetConnections="c8d2c305-a2bb-4a00-99c8-5b920b2f0979" archimateElement="4f33e971-491a-4f58-8f92-613b1540c58f">
+            <bounds x="24" y="60" width="120" height="55"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="5e233a8b-041c-41fd-9a05-1fee3531eb86" targetConnections="f3a0b8b5-ced1-4cc5-a7ea-050ec5b5eb5e d7104730-9a61-405f-8006-3e3cc47f6772 88dfb265-fc82-4c5f-946b-8803fe8fec6d" archimateElement="a05554af-9817-4dd3-8499-6c1b250cd956">
+          <bounds x="25" y="312" width="169" height="160"/>
+          <sourceConnection xsi:type="archimate:Connection" id="4e7bd625-ae0d-4f17-a731-b6b67b2e0908" source="5e233a8b-041c-41fd-9a05-1fee3531eb86" target="49bf9e54-a0f4-4a30-ab78-182d086014d0" archimateRelationship="4914dee7-de2a-4c47-ab2e-176b5ffec28d"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7e01c8dd-5ca0-4965-bb74-b7a4ec3da817" targetConnections="3822b63e-143b-4e06-a9ee-d078653ca05d" archimateElement="71204198-19da-4d48-96de-75b568d4c6d1">
+          <bounds x="28" y="45" width="164" height="40"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c706a59e-2465-4a16-93f4-66f352339f1b" source="7e01c8dd-5ca0-4965-bb74-b7a4ec3da817" target="60502b45-abf4-4291-b3b0-3850e7bbd3b6" archimateRelationship="1079c721-d4da-42f6-9bbb-9b61fae75e2e"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="e8a93585-7088-4ae3-b780-402dd973f57c" name="Instructure Domain" textAlignment="1">
+        <bounds x="540" y="587" width="217" height="264"/>
+        <child xsi:type="archimate:DiagramObject" id="7a40c3e2-3a5f-4571-926d-598bb48797ac" archimateElement="3cbdcc32-664d-4293-b7c6-814f7abd2427">
+          <bounds x="23" y="36" width="169" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="79f95ce1-716f-46f4-8680-4e14e004a27d" source="7a40c3e2-3a5f-4571-926d-598bb48797ac" target="7aeab544-40b7-45e1-b178-0f632c9136b1" archimateRelationship="e42ed502-ae79-49d9-83fa-b4103b88383c"/>
+          <sourceConnection xsi:type="archimate:Connection" id="d7104730-9a61-405f-8006-3e3cc47f6772" source="7a40c3e2-3a5f-4571-926d-598bb48797ac" target="5e233a8b-041c-41fd-9a05-1fee3531eb86" archimateRelationship="49ee49f7-8fb0-4735-953b-62516e2b030c"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7aeab544-40b7-45e1-b178-0f632c9136b1" targetConnections="79f95ce1-716f-46f4-8680-4e14e004a27d" archimateElement="b4dd0441-4728-4f71-8ee7-2800fdf2bd3a">
+          <bounds x="23" y="108" width="169" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="6e35050f-64f0-473b-bdff-0b96ebfc1917" archimateElement="889696ab-1c8f-4f4e-bce0-22f6be176826">
+          <bounds x="23" y="192" width="169" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="25b5911f-26eb-4cda-861d-bce33a72ee6c" name="Business Domain" textAlignment="1">
+        <bounds x="540" y="-60" width="216" height="108"/>
+        <child xsi:type="archimate:DiagramObject" id="60502b45-abf4-4291-b3b0-3850e7bbd3b6" targetConnections="c706a59e-2465-4a16-93f4-66f352339f1b" archimateElement="4b7ee66b-b5c7-45e0-923c-c02fd870985e">
+          <bounds x="24" y="36" width="168" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="53bbd890-8d6a-424e-aa4c-afe644691f01" name="On-Chain Smart Data" textAlignment="1" fillColor="#8080ff">
+        <bounds x="780" y="468" width="217" height="383"/>
+        <child xsi:type="archimate:DiagramObject" id="c9490995-9716-4245-b071-59ccad1d2420" archimateElement="dc10f9fd-6b7e-4534-9a6d-f9e490022356">
+          <bounds x="24" y="120" width="169" height="144"/>
+          <sourceConnection xsi:type="archimate:Connection" id="32d27423-7441-4284-afc8-626a3004841e" source="c9490995-9716-4245-b071-59ccad1d2420" target="319a3069-49f4-4596-bcac-40cb92b94743" archimateRelationship="f012370c-fdba-47b1-bc00-c9fba4223e4d"/>
+          <sourceConnection xsi:type="archimate:Connection" id="21ca9560-c0ac-43df-9299-be7a4ca6f55a" source="c9490995-9716-4245-b071-59ccad1d2420" target="905b01fe-e34b-4b2b-b378-aedf5cc67a1e" archimateRelationship="11824f7f-3478-4cb7-b1e8-26a3edaa63e1"/>
+          <child xsi:type="archimate:DiagramObject" id="1a29526f-9cee-4af7-af90-05ed7da40258" archimateElement="232b52b6-38b0-4a29-a411-88d1dceeeae5">
+            <bounds x="36" y="84" width="120" height="48"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="99377d79-894b-4a26-8b93-ca153e886723" archimateElement="3b9a3031-f45f-440b-8f82-21b66abe55ef">
+            <bounds x="36" y="24" width="120" height="48"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="905b01fe-e34b-4b2b-b378-aedf5cc67a1e" targetConnections="21ca9560-c0ac-43df-9299-be7a4ca6f55a" archimateElement="78f4cbfd-1bd9-494d-abe0-ef1e2c5cf9c7">
+          <bounds x="31" y="288" width="156" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="319a3069-49f4-4596-bcac-40cb92b94743" targetConnections="32d27423-7441-4284-afc8-626a3004841e" archimateElement="439a4f0d-e5c8-429f-8617-da00d25f59ab">
+          <bounds x="30" y="36" width="157" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="88dfb265-fc82-4c5f-946b-8803fe8fec6d" source="319a3069-49f4-4596-bcac-40cb92b94743" target="5e233a8b-041c-41fd-9a05-1fee3531eb86" archimateRelationship="3e774157-d907-4911-ae31-0db0d6906e77"/>
         </child>
       </child>
     </element>

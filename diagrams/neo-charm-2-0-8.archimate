@@ -196,14 +196,14 @@
     <element xsi:type="archimate:SystemSoftware" name="neo-cli.exe" id="dfbcc7f1-f869-497d-b5b5-7db19cf925d2"/>
     <element xsi:type="archimate:SystemSoftware" name="neo.dll (Neo, Neo.Consensus, Neo.Core, Neo.Implementations.Blockchains.LevelDB, Neo.Network, Neo.Network.RPC)" id="19fb0ac8-0457-49b6-8d06-afb5789fd51b"/>
     <element xsi:type="archimate:TechnologyFunction" name="Execution Engine" id="8d074df0-b9ea-4b81-a31d-d20f360e7ac4"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NEO Key-Value Pair Storage Model" id="b929dfda-fdbc-472e-b316-47815ccfecd5"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC Managed Entity Model" id="71b3ede6-7d3e-41bd-b1b2-93d06fa97b26"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC Persistable Entities (Key-Non-Fugible Entity Model)" id="ca154993-949a-447f-aa3c-6accea1f2422"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC Indexed Domain Storage (Key-Non-Fugible Entity Indexed Collections Model)" id="7b7522da-a908-42f5-9efe-107a60be8f3c"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC Domain Storage (AppVersion-User-Domain-Non-Fugible Entity Model)" id="0e5b9447-d86f-4826-81e7-737821ccf20c"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NEO Hashtable (Key-Value Pair) Storage Model" id="b929dfda-fdbc-472e-b316-47815ccfecd5"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 1 Managed Entity Model" id="71b3ede6-7d3e-41bd-b1b2-93d06fa97b26"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 2 Persistable Entities (Keyed Non-Fungible Entity Model)" id="ca154993-949a-447f-aa3c-6accea1f2422"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 4 Collectible Entities (Named Domains of Indexed Collections of Non-Fungible Entities)" id="7b7522da-a908-42f5-9efe-107a60be8f3c"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 4 Collectible Entities (Named Domains of Non-Fungible Entities)" id="0e5b9447-d86f-4826-81e7-737821ccf20c"/>
     <element xsi:type="archimate:TechnologyInterface" name="NPC Storage Keys" id="84aeb158-c770-4b1f-bfcb-f8a845569a9d"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC-KONG" id="47c1a74a-8e1d-4701-a775-8bdd16ceb02b"/>
-    <element xsi:type="archimate:TechnologyInterface" name="NPC Basic Entity Model" id="38dd5f00-e6a1-41ba-b4ec-89e2f7331550"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC-KONG (Keyed Object Notation for Geeks)" id="47c1a74a-8e1d-4701-a775-8bdd16ceb02b"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 0 Basic Entity Model" id="38dd5f00-e6a1-41ba-b4ec-89e2f7331550"/>
     <element xsi:type="archimate:TechnologyService" name="Consensus Service" id="1ca82bfd-87d3-4c24-89e1-d51c23c50a5a"/>
     <element xsi:type="archimate:TechnologyService" name="RpcServer Service" id="7862f8e2-923a-4cbf-b084-cfbb13f7cf89"/>
     <element xsi:type="archimate:TechnologyService" name="Main Service" id="94537ac4-b3c1-4e90-a178-63650834ff7a"/>
@@ -213,6 +213,7 @@
     <element xsi:type="archimate:TechnologyInterface" name="CLI Console" id="b172f8c8-8c5d-449d-b059-894584b836c4"/>
     <element xsi:type="archimate:SystemSoftware" name="neo.vm.dll (Neo.VM)" id="e76b1ed6-6eb6-476e-b268-80021efa5ec8"/>
     <element xsi:type="archimate:TechnologyService" name="Wallet Service" id="1eae7398-d45c-4452-a6f3-b8a1ecad529f"/>
+    <element xsi:type="archimate:TechnologyInterface" name="NPC Level 3 Deletable Entities (Tombstoneable Keyed Non-Fungible Entity Model)" id="2c870d3e-2ad9-4ee5-add2-46899eea0d43"/>
   </folder>
   <folder name="Motivation" id="c781203e-9f12-4a3b-bf51-fb8457ebd14c" type="motivation"/>
   <folder name="Implementation &amp; Migration" id="7901c1e6-31e8-42fc-ba5d-d164973951ab" type="implementation_migration"/>
@@ -333,6 +334,7 @@
     <element xsi:type="archimate:CompositionRelationship" id="2331b62d-7cb1-4cac-83f3-a13232979c12" source="c4341d81-1d24-4687-8906-91e3bfe6c2c0" target="1eae7398-d45c-4452-a6f3-b8a1ecad529f"/>
     <element xsi:type="archimate:ServingRelationship" id="53a84737-26e8-4c9a-b84c-129b9b0191e4" source="1eae7398-d45c-4452-a6f3-b8a1ecad529f" target="7862f8e2-923a-4cbf-b084-cfbb13f7cf89"/>
     <element xsi:type="archimate:CompositionRelationship" id="73827cbd-a5a2-4872-b39e-dea6d2b6fc40" source="c4341d81-1d24-4687-8906-91e3bfe6c2c0" target="83c5f6ee-4025-4e50-9340-2028f6dd81ba"/>
+    <element xsi:type="archimate:ServingRelationship" id="3948dadd-5b87-4bac-9658-63c308a3821a" source="ca154993-949a-447f-aa3c-6accea1f2422" target="2c870d3e-2ad9-4ee5-add2-46899eea0d43"/>
   </folder>
   <folder name="Views" id="3020d484-7aa2-4ccb-ab5c-649396e9a8f3" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" name="NEO Architecture Reference Model v1.0" id="d31e702a-c894-495c-aa76-054ca3b3caa4" connectionRouterType="2">
@@ -1436,46 +1438,49 @@ http://docs.neo.org/en-us/sc/tutorial.html</content>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" name="NPC Smart Data Storage Model 2.7" id="f923a5c1-c838-4b6b-b0c0-7b614e6beb12">
       <child xsi:type="archimate:Group" id="7dc99a00-7d5f-4d49-984b-e85d5a74d027" name="NEO Storage Model" textAlignment="1">
-        <bounds x="24" y="444" width="385" height="97"/>
+        <bounds x="24" y="528" width="385" height="97"/>
         <child xsi:type="archimate:DiagramObject" id="f3ec9c63-ccf5-4a32-a0b8-3469307606ff" archimateElement="b929dfda-fdbc-472e-b316-47815ccfecd5">
           <bounds x="36" y="36" width="313" height="37"/>
           <sourceConnection xsi:type="archimate:Connection" id="53de422b-6b08-4cca-96c9-586a21076b21" source="f3ec9c63-ccf5-4a32-a0b8-3469307606ff" target="26dd200b-6931-4d2f-96ee-cf063ee09ca6" archimateRelationship="f0d004d3-f53b-49c2-ba81-42b9fc2a2b24"/>
           <sourceConnection xsi:type="archimate:Connection" id="f79b161b-f1ac-4bc5-936d-46c044e26beb" source="f3ec9c63-ccf5-4a32-a0b8-3469307606ff" target="e31bd52d-771e-4b51-b516-8ccf6784a4f3" archimateRelationship="eaaed70a-60db-41ee-8195-20b590421096"/>
         </child>
       </child>
-      <child xsi:type="archimate:Group" id="c68f4129-ce08-4326-b8b0-a5a5cedc3bfa" name="NPC Smart Data Model" textAlignment="1">
-        <bounds x="24" y="-96" width="385" height="517"/>
+      <child xsi:type="archimate:Group" id="c68f4129-ce08-4326-b8b0-a5a5cedc3bfa" name="NPC Structured Storage Conceptual Architecture" textAlignment="1">
+        <bounds x="24" y="-96" width="385" height="601"/>
         <child xsi:type="archimate:Group" id="a5c42574-28a8-4cbd-9f72-a9fdcb5112d9" name="NPC Key-Entity Storage" textAlignment="1">
-          <bounds x="24" y="240" width="337" height="121"/>
+          <bounds x="24" y="288" width="337" height="121"/>
           <child xsi:type="archimate:DiagramObject" id="26dd200b-6931-4d2f-96ee-cf063ee09ca6" targetConnections="53de422b-6b08-4cca-96c9-586a21076b21 6b8a2b43-dcca-448f-bbaf-7a540430342e" archimateElement="ca154993-949a-447f-aa3c-6accea1f2422">
             <bounds x="72" y="36" width="193" height="61"/>
           </child>
         </child>
-        <child xsi:type="archimate:Group" id="0103bf1a-219a-4c74-8891-28bdf3d35e76" name="NPC Entity Storage Domains" textAlignment="1">
-          <bounds x="24" y="36" width="337" height="181"/>
-          <child xsi:type="archimate:DiagramObject" id="cb6b0804-dd76-4cee-97f5-3918207127d4" targetConnections="6dd934dd-089b-4cba-b21e-7d3a6a9062bb" archimateElement="7b7522da-a908-42f5-9efe-107a60be8f3c">
-            <bounds x="12" y="36" width="313" height="49"/>
-          </child>
+        <child xsi:type="archimate:Group" id="0103bf1a-219a-4c74-8891-28bdf3d35e76" name="NPC Named Domain Storage" textAlignment="1" fillColor="#c0c0c0">
+          <bounds x="24" y="36" width="337" height="229"/>
           <child xsi:type="archimate:DiagramObject" id="e31bd52d-771e-4b51-b516-8ccf6784a4f3" targetConnections="1927d428-6765-4aea-8bca-f85e593456c4 cf8f393d-d05c-422d-8c50-141ec05a55a1 f79b161b-f1ac-4bc5-936d-46c044e26beb" archimateElement="0e5b9447-d86f-4826-81e7-737821ccf20c">
-            <bounds x="12" y="108" width="313" height="49"/>
+            <bounds x="12" y="168" width="313" height="49"/>
             <sourceConnection xsi:type="archimate:Connection" id="6dd934dd-089b-4cba-b21e-7d3a6a9062bb" source="e31bd52d-771e-4b51-b516-8ccf6784a4f3" target="cb6b0804-dd76-4cee-97f5-3918207127d4" archimateRelationship="cf287a41-4cbc-4bff-8c96-3563bec0515a"/>
+          </child>
+          <child xsi:type="archimate:Group" id="c57e8271-1a45-4439-9d95-70ccb28f3d5c" name="NPC Indexed Collections Storage" textAlignment="1">
+            <bounds x="12" y="36" width="313" height="121"/>
+            <child xsi:type="archimate:DiagramObject" id="cb6b0804-dd76-4cee-97f5-3918207127d4" targetConnections="6dd934dd-089b-4cba-b21e-7d3a6a9062bb" archimateElement="7b7522da-a908-42f5-9efe-107a60be8f3c">
+              <bounds x="24" y="36" width="265" height="61"/>
+            </child>
           </child>
         </child>
         <child xsi:type="archimate:DiagramObject" id="e770a0a1-c6d1-4264-85c9-6e05658de33f" targetConnections="e038c8ea-4a27-4193-801b-1f66e1b11ab8" archimateElement="84aeb158-c770-4b1f-bfcb-f8a845569a9d">
-          <bounds x="240" y="384" width="121" height="49"/>
+          <bounds x="240" y="432" width="121" height="61"/>
           <sourceConnection xsi:type="archimate:Connection" id="1927d428-6765-4aea-8bca-f85e593456c4" source="e770a0a1-c6d1-4264-85c9-6e05658de33f" target="e31bd52d-771e-4b51-b516-8ccf6784a4f3" archimateRelationship="050a3bac-c523-4f6c-9ee9-e310efd617a9"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="2ea83843-b91b-4fc0-ae55-a32a79e329f5" targetConnections="c72c2e0f-2b22-4a68-a512-607ff34b21e6" archimateElement="71b3ede6-7d3e-41bd-b1b2-93d06fa97b26">
-          <bounds x="24" y="384" width="121" height="49"/>
+          <bounds x="24" y="432" width="121" height="61"/>
           <sourceConnection xsi:type="archimate:Connection" id="cf8f393d-d05c-422d-8c50-141ec05a55a1" source="2ea83843-b91b-4fc0-ae55-a32a79e329f5" target="e31bd52d-771e-4b51-b516-8ccf6784a4f3" archimateRelationship="4b216b2d-00f8-428f-9aa0-fee7ac8089c8"/>
           <sourceConnection xsi:type="archimate:Connection" id="6b8a2b43-dcca-448f-bbaf-7a540430342e" source="2ea83843-b91b-4fc0-ae55-a32a79e329f5" target="26dd200b-6931-4d2f-96ee-cf063ee09ca6" archimateRelationship="63e95c73-a306-4382-b54a-4d8b79816fb5"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="92c89609-591b-48a5-90ab-65dec0a2edeb" archimateElement="47c1a74a-8e1d-4701-a775-8bdd16ceb02b">
-          <bounds x="240" y="459" width="121" height="43"/>
+          <bounds x="240" y="516" width="121" height="61"/>
           <sourceConnection xsi:type="archimate:Connection" id="e038c8ea-4a27-4193-801b-1f66e1b11ab8" source="92c89609-591b-48a5-90ab-65dec0a2edeb" target="e770a0a1-c6d1-4264-85c9-6e05658de33f" archimateRelationship="be9dc2a8-45d2-448e-a3c3-0db6f215700d"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="2d5a4d25-a3d2-4d1d-be87-b8ae081689ae" archimateElement="38dd5f00-e6a1-41ba-b4ec-89e2f7331550">
-          <bounds x="24" y="456" width="121" height="49"/>
+          <bounds x="24" y="516" width="121" height="61"/>
           <sourceConnection xsi:type="archimate:Connection" id="c72c2e0f-2b22-4a68-a512-607ff34b21e6" source="2d5a4d25-a3d2-4d1d-be87-b8ae081689ae" target="2ea83843-b91b-4fc0-ae55-a32a79e329f5" archimateRelationship="ba75bf77-c64f-455b-8f9b-2d56379d27b1"/>
         </child>
       </child>
@@ -1595,6 +1600,62 @@ http://docs.neo.org/en-us/sc/tutorial.html</content>
         <child xsi:type="archimate:DiagramObject" id="d45c5a9a-9d17-46a6-abca-8f057fe29bf3" archimateElement="e76b1ed6-6eb6-476e-b268-80021efa5ec8">
           <bounds x="502" y="396" width="145" height="49"/>
           <sourceConnection xsi:type="archimate:Connection" id="ebb91c80-31fc-4b0c-bd18-7ef4898903e5" source="d45c5a9a-9d17-46a6-abca-8f057fe29bf3" target="33afd54a-1ec4-438d-867e-4c6222e1577f" archimateRelationship="affe8051-e185-4e4d-8be6-68f1ac627b17"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="NPC Smart Data Storage Model 2.8" id="f1b4444d-1899-47ee-b33d-c80570b5005c">
+      <child xsi:type="archimate:Group" id="93f6d925-b23c-4783-af95-d546c45eaf65" name="NEO Storage Model" textAlignment="1">
+        <bounds x="24" y="480" width="829" height="97"/>
+        <child xsi:type="archimate:DiagramObject" id="28f8fed2-3e45-4ac0-a960-525f159d2799" archimateElement="b929dfda-fdbc-472e-b316-47815ccfecd5">
+          <bounds x="24" y="36" width="781" height="37"/>
+          <sourceConnection xsi:type="archimate:Connection" id="6786a6d5-1f0e-44dd-87e7-11176a28cbd1" source="28f8fed2-3e45-4ac0-a960-525f159d2799" target="364958bb-4b4f-4de7-8252-27a110e3b067" archimateRelationship="f0d004d3-f53b-49c2-ba81-42b9fc2a2b24"/>
+          <sourceConnection xsi:type="archimate:Connection" id="2dd6297a-be49-48ec-b6ad-c73ab94e47a6" source="28f8fed2-3e45-4ac0-a960-525f159d2799" target="f905e96d-b441-46ae-bebd-e038004f4bc8" archimateRelationship="eaaed70a-60db-41ee-8195-20b590421096"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="214b7daf-e76c-483e-a638-06596c25a844" name="NPC Structured Storage Conceptual Architecture" textAlignment="1">
+        <bounds x="24" y="-96" width="829" height="553"/>
+        <child xsi:type="archimate:Group" id="b606c25e-cee7-4520-880a-f7e0aac913ba" name="NPC Key-Entity Storage Model" textAlignment="1" fillColor="#c0c0c0">
+          <bounds x="24" y="36" width="337" height="313"/>
+          <child xsi:type="archimate:DiagramObject" id="364958bb-4b4f-4de7-8252-27a110e3b067" targetConnections="6786a6d5-1f0e-44dd-87e7-11176a28cbd1 a1fcc3d2-56ab-44cb-b7f2-1da2f1d4887a" archimateElement="ca154993-949a-447f-aa3c-6accea1f2422">
+            <bounds x="24" y="216" width="289" height="49"/>
+            <sourceConnection xsi:type="archimate:Connection" id="4aadd123-d477-4ad2-8d94-f3b860caafc4" source="364958bb-4b4f-4de7-8252-27a110e3b067" target="88eee798-2f7f-4145-98b6-b4c633872a94" archimateRelationship="3948dadd-5b87-4bac-9658-63c308a3821a"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="88eee798-2f7f-4145-98b6-b4c633872a94" targetConnections="4aadd123-d477-4ad2-8d94-f3b860caafc4" archimateElement="2c870d3e-2ad9-4ee5-add2-46899eea0d43">
+            <bounds x="24" y="108" width="289" height="49"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:Group" id="39b90137-5112-4c6b-b218-e3fe2750af45" name="NPC Named Domain Storage Model" textAlignment="1" fillColor="#c0c0c0">
+          <bounds x="396" y="36" width="409" height="313"/>
+          <child xsi:type="archimate:Group" id="1e8a2c59-e446-4750-8664-747ca031307d" name="NPC Named Parent Domain" textAlignment="1">
+            <bounds x="24" y="36" width="361" height="253"/>
+            <child xsi:type="archimate:Group" id="c98963dc-fb9a-405e-adcb-d28ed83ba5f2" name="NPC Indexed Collections Storage Model" textAlignment="1" fillColor="#c0c0c0">
+              <bounds x="24" y="36" width="313" height="121"/>
+              <child xsi:type="archimate:DiagramObject" id="22248de1-e4ee-479a-902c-30bb2b2069f1" targetConnections="b738cd68-2ec4-4bd4-81db-0246fdbcf3f1" archimateElement="7b7522da-a908-42f5-9efe-107a60be8f3c">
+                <bounds x="24" y="36" width="265" height="61"/>
+              </child>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="f905e96d-b441-46ae-bebd-e038004f4bc8" targetConnections="2dd6297a-be49-48ec-b6ad-c73ab94e47a6 1546eb1f-e653-4a8d-8b11-fe640532b212 47c5bfe4-e58a-4319-b06d-2ea96d6221d0" archimateElement="0e5b9447-d86f-4826-81e7-737821ccf20c">
+              <bounds x="24" y="180" width="313" height="49"/>
+              <sourceConnection xsi:type="archimate:Connection" id="b738cd68-2ec4-4bd4-81db-0246fdbcf3f1" source="f905e96d-b441-46ae-bebd-e038004f4bc8" target="22248de1-e4ee-479a-902c-30bb2b2069f1" archimateRelationship="cf287a41-4cbc-4bff-8c96-3563bec0515a"/>
+            </child>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e68ae6fa-ab2e-4d06-9a78-da3903ae8bab" targetConnections="da262823-721f-4a14-ac64-0bd920a5eef7" archimateElement="84aeb158-c770-4b1f-bfcb-f8a845569a9d">
+          <bounds x="612" y="384" width="145" height="61"/>
+          <sourceConnection xsi:type="archimate:Connection" id="1546eb1f-e653-4a8d-8b11-fe640532b212" source="e68ae6fa-ab2e-4d06-9a78-da3903ae8bab" target="f905e96d-b441-46ae-bebd-e038004f4bc8" archimateRelationship="050a3bac-c523-4f6c-9ee9-e310efd617a9"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e6c359a7-c58a-4c70-bd1f-1b927ee7835f" targetConnections="22398912-f99d-453c-9e29-4979a8f9cf05" archimateElement="71b3ede6-7d3e-41bd-b1b2-93d06fa97b26">
+          <bounds x="312" y="384" width="145" height="61"/>
+          <sourceConnection xsi:type="archimate:Connection" id="47c5bfe4-e58a-4319-b06d-2ea96d6221d0" source="e6c359a7-c58a-4c70-bd1f-1b927ee7835f" target="f905e96d-b441-46ae-bebd-e038004f4bc8" archimateRelationship="4b216b2d-00f8-428f-9aa0-fee7ac8089c8"/>
+          <sourceConnection xsi:type="archimate:Connection" id="a1fcc3d2-56ab-44cb-b7f2-1da2f1d4887a" source="e6c359a7-c58a-4c70-bd1f-1b927ee7835f" target="364958bb-4b4f-4de7-8252-27a110e3b067" archimateRelationship="63e95c73-a306-4382-b54a-4d8b79816fb5"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="821519ee-3318-449c-a7b7-fd965dee2aa7" archimateElement="47c1a74a-8e1d-4701-a775-8bdd16ceb02b">
+          <bounds x="612" y="468" width="145" height="61"/>
+          <sourceConnection xsi:type="archimate:Connection" id="da262823-721f-4a14-ac64-0bd920a5eef7" source="821519ee-3318-449c-a7b7-fd965dee2aa7" target="e68ae6fa-ab2e-4d06-9a78-da3903ae8bab" archimateRelationship="be9dc2a8-45d2-448e-a3c3-0db6f215700d"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7a73b650-cb6c-499f-a49b-4203cc8daa2c" archimateElement="38dd5f00-e6a1-41ba-b4ec-89e2f7331550">
+          <bounds x="312" y="468" width="145" height="61"/>
+          <sourceConnection xsi:type="archimate:Connection" id="22398912-f99d-453c-9e29-4979a8f9cf05" source="7a73b650-cb6c-499f-a49b-4203cc8daa2c" target="e6c359a7-c58a-4c70-bd1f-1b927ee7835f" archimateRelationship="ba75bf77-c64f-455b-8f9b-2d56379d27b1"/>
         </child>
       </child>
     </element>
